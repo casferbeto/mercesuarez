@@ -307,3 +307,60 @@ boot();
   // estado inicial (si el navegador auto-inicia por alguna razón)
   if (!video.paused) hideOverlay();
 })();
+
+(async () => {
+  const el = document.getElementById("news-list");
+  if (!el) return;
+
+  try {
+    const res = await fetch("assets/data/news.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("news.json not found");
+
+    const data = await res.json();
+    const items = Array.isArray(data.items) ? data.items.slice(0, 3) : [];
+
+    if (!items.length) {
+      el.innerHTML = `
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">Noticias</span>
+            <span class="muted tiny">Hoy</span>
+          </div>
+          <h3>Sin novedades por ahora</h3>
+          <p class="muted">Vuelve más tarde para ver oportunidades y noticias positivas.</p>
+          <a class="link" href="#contacto">Contactar</a>
+        </article>
+      `;
+      return;
+    }
+
+    const niceDate = (iso) => {
+      if (!iso) return "Hoy";
+      // si viene YYYY-MM-DD o ISO, mostramos YYYY-MM-DD (simple y seguro)
+      return String(iso).slice(0, 10);
+    };
+
+    el.innerHTML = items.map(n => {
+      const title = n.title || "Noticia";
+      const url = n.url || "#";
+      const source = n.source || "Fuente";
+      const publishedAt = niceDate(n.publishedAt);
+      const summary = n.summary || "";
+
+      return `
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">${source}</span>
+            <span class="muted tiny">${publishedAt}</span>
+          </div>
+          <h3>${title}</h3>
+          <p class="muted">${summary}</p>
+          <a class="link" href="${url}" target="_blank" rel="noopener noreferrer">Leer más</a>
+        </article>
+      `;
+    }).join("");
+  } catch (e) {
+    // si falla el fetch, dejamos lo que ya está (placeholder)
+    // opcional: console.log(e);
+  }
+})();
