@@ -8,22 +8,30 @@ const $ = (sel) => document.querySelector(sel);
 
 const PRODUCTS = [
   {
-    id: "olmos",
-    title: "Casa Olmos",
-    price: "$3,250,000 MXN",
+    id: "colmenarp",
+    title: "Casa Colmenar Platino",
+    price: "$2,058,000 MXN",
     desc: "Casa amplia y luminosa, ideal para familia. Excelente ubicación y acabados modernos.",
-    badges: ["3 recámaras", "2.5 baños", "2 estacionamientos", "Jardín"],
+    badges: ["2 recámaras", "3 baños", "2 estacionamientos", "Jardín", "Cisterna", "Vigilancia 24/7", "Alberca", "Parque Pet Friendly"],
     images: [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=70",
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1400&q=70",
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=70",
-      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1400&q=70",
+      "assets/img/colmenarp/cocina%203.jpeg",
+      "assets/img/colmenarp/frente.jpeg",
+      "assets/img/colmenarp/sala.jpeg",
+      "assets/img/colmenarp/comedor.jpeg",
+      "assets/img/colmenarp/cocina.jpeg",
+      "assets/img/colmenarp/cocina%202.jpeg",
+      "assets/img/colmenarp/estudio.jpeg",
+      "assets/img/colmenarp/cuarto%20tv.jpeg",
+      "assets/img/colmenarp/recamara%201.jpeg",
+      "assets/img/colmenarp/ba%C3%B1o.jpeg",
+      "assets/img/colmenarp/plantabaja.jpeg",
+      "assets/img/colmenarp/plantabaja%202.jpeg",
     ],
   },
   {
-    id: "asturia",
-    title: "Departamento Asturia",
-    price: "$1,850,000 MXN",
+    id: "colmenar",
+    title: "Casa Colmenar",
+    price: "$2,058,000 MXN",
     desc: "Departamento cómodo en zona con gran conectividad. Perfecto para pareja o inversión.",
     badges: ["2 recámaras", "2 baños", "1 estacionamiento", "Amenidades"],
     images: [
@@ -33,9 +41,21 @@ const PRODUCTS = [
     ],
   },
   {
-    id: "serena",
-    title: "Casa Serena",
-    price: "$2,900,000 MXN",
+    id: "santiago",
+    title: "Casa Santiago",
+    price: "$2,348,000 MXN",
+    desc: "Diseño moderno con espacios abiertos. Zona tranquila y con buena plusvalía.",
+    badges: ["3 recámaras", "2 baños", "Terraza", "Cocina integral"],
+    images: [
+      "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1400&q=70",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1400&q=70",
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=70",
+    ],
+  },
+  {
+    id: "olmo",
+    title: "Depto. Olmo",
+    price: "$1,442,000 MXN",
     desc: "Diseño moderno con espacios abiertos. Zona tranquila y con buena plusvalía.",
     badges: ["3 recámaras", "2 baños", "Terraza", "Cocina integral"],
     images: [
@@ -53,7 +73,7 @@ function renderProducts() {
 
   grid.innerHTML = PRODUCTS.map(p => `
     <article class="card product" data-product="${p.id}" tabindex="0" role="button" aria-label="Abrir ${p.title}">
-      <div class="thumb"></div>
+      <div class="thumb" style="background-image:url('${p.images[0]}')"></div>
       <div class="body">
         <h3>${p.title}</h3>
         <div class="price">${p.price}</div>

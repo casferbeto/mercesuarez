@@ -741,3 +741,17 @@ body{ background:#fff; overflow-x:hidden; line-height:1.45; }
 @media (max-width: 560px){
   .section > .container{ padding: 16px; border-radius: 22px; }
 }
+
+/* ---- Products: 4 cards en una fila (desktop) ---- */
+@media (min-width: 1200px){
+  .products{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Portadas de productos usando la primera imagen */
+.product .thumb{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
