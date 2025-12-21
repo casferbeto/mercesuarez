@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tu Hogar en Puebla | Merce Suárez</title>
+  <meta name="description" content="Tu Hogar en Puebla: casas y departamentos con Merce Suárez. Noticias, productos, comentarios y preguntas frecuentes." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Fondo decorativo -->
+  <div class="bg"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">🏡</span>
+        <span class="brand-text">
+          <strong>Tu Hogar en Puebla</strong>
+          <small>con Merce Suárez</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#productos">Propiedades</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#comentarios">Comentarios</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="#productos">Ver propiedades</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="inicio" class="hero">
+    <div class="container hero-grid">
+      <section class="hero-copy">
+        <div class="pill">✨ Asesoría personalizada • Puebla</div>
+        <h1>Encuentra tu próximo hogar en Puebla</h1>
+        <p class="muted">
+          Compra, renta y venta de propiedades con atención cercana y transparente.
+          Aquí verás noticias del mercado, testimonios reales y un catálogo de propiedades.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#productos">Explorar propiedades</a>
+          <a class="btn btn-soft" href="#video">Ver bienvenida</a>
+        </div>
+
+        <div class="social-row" aria-label="Redes sociales">
+          <a class="icon-btn" href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+            <!-- Icono FB -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v9h3v-9h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg>
+          </a>
+          <a class="icon-btn" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <!-- Icono IG -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6zM12 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm5.4-2.2a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6z"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <aside class="hero-card">
+        <div class="profile">
+          <div class="profile-photo" role="img" aria-label="Foto de Merce Suárez (placeholder)"></div>
+          <div class="profile-meta">
+            <h2>Merce Suárez</h2>
+            <p class="muted">Asesora inmobiliaria · Puebla</p>
+          </div>
+        </div>
+
+        <div class="quick">
+          <div class="quick-item">
+            <span class="quick-kpi">+120</span>
+            <span class="muted">clientes atendidos</span>
+          </div>
+          <div class="quick-item">
+            <span class="quick-kpi">48h</span>
+            <span class="muted">tiempo de respuesta</span>
+          </div>
+          <div class="quick-item">
+            <span class="quick-kpi">5★</span>
+            <span class="muted">calificación promedio</span>
+          </div>
+        </div>
+
+        <div class="contact-mini">
+          <a class="btn btn-primary btn-full" href="#contacto">Contactar</a>
+          <p class="tiny muted">*Datos placeholder por ahora.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Video -->
+  <section id="video" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Video de bienvenida</h2>
+        <p class="muted">Un mensaje corto de Merce para darte la bienvenida (por ahora un video de referencia).</p>
+      </div>
+
+      <div class="video-wrap">
+        <iframe
+          title="Video de bienvenida"
+          src="https://www.youtube.com/embed/ysz5S6PUM-U"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Propiedades destacadas</h2>
+        <p class="muted">Haz click en una propiedad para ver fotos y detalles en un modal.</p>
+      </div>
+
+      <div class="grid products" id="productsGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Noticias -->
+  <section id="noticias" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Noticias</h2>
+        <p class="muted">Actualizaciones del mercado, tips y novedades.</p>
+      </div>
+
+      <div class="grid news">
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">Mercado</span>
+            <span class="muted tiny">Hace 2 días</span>
+          </div>
+          <h3>¿Qué zonas de Puebla están subiendo más?</h3>
+          <p class="muted">Resumen corto sobre zonas con plusvalía y por qué están creciendo.</p>
+          <a class="link" href="#" onclick="return false;">Leer más</a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">Crédito</span>
+            <span class="muted tiny">Hace 1 semana</span>
+          </div>
+          <h3>Guía rápida: Infonavit vs Bancario</h3>
+          <p class="muted">Cómo elegir el mejor crédito según tu perfil y objetivo.</p>
+          <a class="link" href="#" onclick="return false;">Leer más</a>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">Tips</span>
+            <span class="muted tiny">Hace 2 semanas</span>
+          </div>
+          <h3>Checklist para visitar una casa</h3>
+          <p class="muted">Lo que debes revisar antes de apartar: papeles, servicios y estructura.</p>
+          <a class="link" href="#" onclick="return false;">Leer más</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comentarios -->
+  <section id="comentarios" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Comentarios de clientes</h2>
+        <p class="muted">Testimonios (se guardan en este navegador para la demo).</p>
+      </div>
+
+      <div class="comments-layout">
+        <div class="comments-list" id="commentsList"></div>
+
+        <form class="card form" id="commentForm">
+          <h3>Deja tu comentario</h3>
+
+          <label class="label" for="cName">Nombre</label>
+          <input class="input" id="cName" type="text" placeholder="Ej. Ana" required />
+
+          <label class="label" for="cRating">Calificación</label>
+          <select class="input" id="cRating" required>
+            <option value="5">★★★★★ (5)</option>
+            <option value="4">★★★★☆ (4)</option>
+            <option value="3">★★★☆☆ (3)</option>
+            <option value="2">★★☆☆☆ (2)</option>
+            <option value="1">★☆☆☆☆ (1)</option>
+          </select>
+
+          <label class="label" for="cText">Comentario</label>
+          <textarea class="input" id="cText" rows="4" placeholder="Cuéntanos tu experiencia..." required></textarea>
+
+          <button class="btn btn-primary" type="submit">Publicar</button>
+          <button class="btn btn-ghost" type="button" id="btnClearComments">Borrar comentarios (demo)</button>
+
+          <p class="tiny muted">*Esto es demo estática. Más adelante se puede conectar a un backend.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Preguntas y respuestas</h2>
+        <p class="muted">Dudas comunes sobre compra/venta/renta.</p>
+      </div>
+
+      <div class="faq" id="faqList">
+        <details class="faq-item">
+          <summary>¿Qué necesito para iniciar un proceso de compra?</summary>
+          <div class="faq-body muted">
+            Identificación, comprobante de ingresos y definición de presupuesto. Si es crédito, preaprobación ayuda mucho.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuánto tiempo tarda una operación?</summary>
+          <div class="faq-body muted">
+            Depende del tipo de crédito y documentación, pero típicamente entre 3 y 8 semanas.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Puedo vender mi casa y comprar otra al mismo tiempo?</summary>
+          <div class="faq-body muted">
+            Sí. Se puede planear con tiempos, apartados y estrategias para no quedarte “en el aire”.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué costos adicionales debo considerar?</summary>
+          <div class="faq-body muted">
+            Notaría, avalúo, impuestos, comisiones bancarias (si aplica), y posibles adecuaciones/mudanza.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contacto</h2>
+        <p class="muted">Déjame tus datos y con gusto te ayudo.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Redes</h3>
+          <p class="muted">Conecta con Merce en redes (links placeholder).</p>
+          <div class="social-row">
+            <a class="icon-btn" href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v9h3v-9h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6zM12 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm5.4-2.2a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Mensaje rápido</h3>
+          <form onsubmit="return false;">
+            <label class="label" for="mName">Nombre</label>
+            <input class="input" id="mName" type="text" placeholder="Tu nombre" />
+
+            <label class="label" for="mMsg">Mensaje</label>
+            <textarea class="input" id="mMsg" rows="4" placeholder="Quiero información de..."></textarea>
+
+            <button class="btn btn-primary" type="button" onclick="alert('Demo: aquí después conectamos WhatsApp o correo')">
+              Enviar
+            </button>
+            <p class="tiny muted">*Demo estática (sin backend).</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="muted">© <span id="year"></span> Tu Hogar en Puebla · Merce Suárez</div>
+      <a class="link" href="#inicio">Volver arriba</a>
+    </div>
+  </footer>
+
+  <!-- MODAL: Carrusel de producto -->
+  <div class="modal-backdrop hidden" id="modalBackdrop" role="dialog" aria-modal="true" aria-label="Detalles de propiedad">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+
+      <div class="modal-grid">
+        <div class="carousel">
+          <button class="carousel-nav prev" id="prevBtn" aria-label="Anterior">‹</button>
+          <img id="carouselImg" alt="Foto de propiedad" />
+          <button class="carousel-nav next" id="nextBtn" aria-label="Siguiente">›</button>
+
+          <div class="dots" id="dots"></div>
+        </div>
+
+        <div class="modal-info">
+          <h3 id="modalTitle">—</h3>
+          <div class="price" id="modalPrice">—</div>
+          <p class="muted" id="modalDesc">—</p>
+
+          <div class="features" id="modalFeatures"></div>
+
+          <div class="modal-actions">
+            <a class="btn btn-primary btn-full" href="#contacto" id="modalCta">Quiero más info</a>
+            <button class="btn btn-ghost btn-full" id="copyProduct">Copiar nombre de propiedad</button>
+          </div>
+
+          <p class="tiny muted">*Imágenes y datos de referencia por ahora.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
