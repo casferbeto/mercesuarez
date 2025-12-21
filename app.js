@@ -308,6 +308,44 @@ boot();
   if (!video.paused) hideOverlay();
 })();
 
+// =========================
+// UI/UX: reveal on scroll (discreto)
+// (append only, no toca lógica existente)
+// =========================
+(() => {
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const targets = [
+    ...document.querySelectorAll("main.hero .hero-copy"),
+    ...document.querySelectorAll("main.hero .hero-card"),
+    ...document.querySelectorAll("section.section > .container"),
+    ...document.querySelectorAll("footer .container"),
+  ];
+
+  targets.forEach(el => el.classList.add("reveal"));
+
+  if (reduce){
+    targets.forEach(el => el.classList.add("is-in"));
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)){
+    targets.forEach(el => el.classList.add("is-in"));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        e.target.classList.add("is-in");
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+
+  targets.forEach(el => io.observe(el));
+})();
+
 (async () => {
   const el = document.getElementById("news-list");
   if (!el) return;
