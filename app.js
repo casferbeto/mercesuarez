@@ -11,7 +11,7 @@ const PRODUCTS = [
     id: "colmenarp",
     title: "Casa Colmenar Platino",
     price: "$2,058,000 MXN",
-    desc: "Casa amplia y luminosa, ideal para familia. Excelente ubicación y acabados modernos.",
+    desc: "79.85 metros de terreno, 3 baños completos, Sala-Comedor, Cocina integral , Área de TV, Patio de servicio , 2 Cajones de estacionamiento, ⭐️Amenidades , 🏊🏻‍♂️ Alberca, 🐾 Parque para mascotas,🎡Juegos infantiles, 🌳 Áreas v erdes.",
     badges: ["2 recámaras", "3 baños", "2 estacionamientos", "Jardín", "Cisterna", "Vigilancia 24/7", "Alberca", "Parque Pet Friendly"],
     images: [
       "assets/img/colmenarp/cocina%203.jpeg",
