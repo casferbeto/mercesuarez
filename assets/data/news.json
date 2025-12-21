@@ -1,12 +1,26 @@
 {
-  "updatedAt": "manual",
+  "updatedAt": "2025-12-21T18:01:03.559Z",
   "items": [
     {
-      "title": "Próximamente: noticias positivas sobre inversión en Puebla",
+      "title": "Puebla: oportunidades de inversión en vivienda (ejemplo)",
       "url": "https://www.mercesuarez.com/",
       "source": "MerceSuarez.com",
-      "publishedAt": "",
-      "summary": "Aquí se mostrarán automáticamente 3 noticias sobre plusvalía, créditos e inversión inmobiliaria en Puebla."
+      "publishedAt": "2025-12-21T18:01:03.559Z",
+      "summary": "Ejemplo de noticia positiva. Luego automatizamos que venga de medios reales."
+    },
+    {
+      "title": "Créditos hipotecarios: tips para elegir mejor (ejemplo)",
+      "url": "https://www.mercesuarez.com/",
+      "source": "MerceSuarez.com",
+      "publishedAt": "2025-12-21T18:01:03.559Z",
+      "summary": "Ejemplo de contenido. Después conectamos Infonavit/bancos/tasas."
+    },
+    {
+      "title": "Plusvalía en Puebla: zonas con crecimiento (ejemplo)",
+      "url": "https://www.mercesuarez.com/",
+      "source": "MerceSuarez.com",
+      "publishedAt": "2025-12-21T18:01:03.559Z",
+      "summary": "Ejemplo. Más adelante lo hacemos 100% automático con noticias reales."
     }
   ]
 }
