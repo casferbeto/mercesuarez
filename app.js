@@ -278,3 +278,32 @@ function boot() {
 }
 
 boot();
+
+
+(() => {
+  const wrap = document.getElementById("welcomeVideoWrap");
+  const video = document.getElementById("welcomeVideo");
+  const overlay = wrap?.querySelector(".video-play-overlay");
+
+  if (!wrap || !video || !overlay) return;
+
+  const hideOverlay = () => overlay.classList.add("is-hidden");
+  const showOverlay = () => overlay.classList.remove("is-hidden");
+
+  overlay.addEventListener("click", () => {
+    // si está en pausa, play; si está reproduciendo, pause
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+
+  video.addEventListener("play", hideOverlay);
+  video.addEventListener("playing", hideOverlay);
+  video.addEventListener("pause", showOverlay);
+  video.addEventListener("ended", showOverlay);
+
+  // estado inicial (si el navegador auto-inicia por alguna razón)
+  if (!video.paused) hideOverlay();
+})();

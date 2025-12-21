@@ -44,7 +44,7 @@
         <div class="pill">✨ Asesoría personalizada • Puebla</div>
         <h1>Encuentra tu próximo hogar en Puebla</h1>
         <p class="muted">
-          Compra, renta y venta de propiedades con atención cercana y transparente.
+          Venta de propiedades con atención cercana y transparente.
           Aquí verás noticias del mercado, testimonios reales y un catálogo de propiedades.
         </p>
 
@@ -67,12 +67,23 @@
 
       <aside class="hero-card">
         <div class="profile">
-          <div class="profile-photo" role="img" aria-label="Foto de Merce Suárez (placeholder)"></div>
-          <div class="profile-meta">
-            <h2>Merce Suárez</h2>
-            <p class="muted">Asesora inmobiliaria · Puebla</p>
-          </div>
-        </div>
+  <img
+    class="profile-photo"
+    src="assets/img/merce-avatar-512.webp"
+    srcset="assets/img/merce-avatar-256.webp 256w, assets/img/merce-avatar-512.webp 512w"
+    sizes="(max-width: 600px) 88px, 112px"
+    alt="Foto de Merce Suárez"
+    width="112"
+    height="112"
+    loading="lazy"
+    decoding="async"
+  />
+  <div class="profile-meta">
+    <h2>Merce Suárez</h2>
+    <p class="muted">Asesora inmobiliaria · Puebla</p>
+  </div>
+</div>
+
 
         <div class="quick">
           <div class="quick-item">
@@ -80,7 +91,7 @@
             <span class="muted">clientes atendidos</span>
           </div>
           <div class="quick-item">
-            <span class="quick-kpi">48h</span>
+            <span class="quick-kpi">1h</span>
             <span class="muted">tiempo de respuesta</span>
           </div>
           <div class="quick-item">
@@ -90,32 +101,43 @@
         </div>
 
         <div class="contact-mini">
-          <a class="btn btn-primary btn-full" href="#contacto">Contactar</a>
-          <p class="tiny muted">*Datos placeholder por ahora.</p>
-        </div>
+  <a class="btn btn-primary btn-full" href="#contacto">Contactar</a>
+  <p class="tiny muted contact-mini-text">
+Soy Merce Suárez, asesora inmobiliaria en Puebla con más de 10 años de experiencia ayudando a familias a encontrar su futuro hogar y a inversionistas a elegir propiedades con gran potencial.
+Te acompaño con un trato cercano, claro y honesto en todo el proceso: búsqueda, negociación, trámites y crédito, hasta la firma y escrituración.
+Si quieres comprar para vivir o invertir en Puebla con tranquilidad, estoy aquí para ayudarte.
+  </p>
+</div>
       </aside>
     </div>
   </main>
 
   <!-- Video -->
   <section id="video" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Video de bienvenida</h2>
-        <p class="muted">Un mensaje corto de Merce para darte la bienvenida (por ahora un video de referencia).</p>
-      </div>
-
-      <div class="video-wrap">
-        <iframe
-          title="Video de bienvenida"
-          src="https://www.youtube.com/embed/ysz5S6PUM-U"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+  <div class="container">
+    <div class="section-head">
+      <h2>Video de bienvenida</h2>
+      <p class="muted">Bienvenido(a) Si te gustaría conocer opciones disponibles y ver cuál se adapta mejor a ti, agenda una visita y con gusto te acompaño paso a paso..</p>
     </div>
-  </section>
+
+    <div class="video-wrap" id="welcomeVideoWrap">
+  <video
+    class="welcome-video"
+    id="welcomeVideo"
+    controls
+    playsinline
+    preload="metadata"
+  >
+    <source src="assets/img/promonaty3cantos.mp4" type="video/mp4" />
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <button class="video-play-overlay" type="button" aria-label="Reproducir video">
+    <span class="video-play-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
+
 
   <!-- Productos -->
   <section id="productos" class="section">
